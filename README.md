@@ -1,1 +1,1 @@
-A collection of codeforces solution from CSEC ASTU contest.
+A collection of codeforces problems solution from CSEC ASTU contest.
