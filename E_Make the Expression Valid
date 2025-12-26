@@ -1,0 +1,28 @@
+n = int(input())
+for i in range(n):
+    s = input()
+
+    if s[1] == "<":
+        if s[0] > s[2]:
+            print(s[0] + ">" + s[2])
+        elif s[0] == s[2]:
+            print(s[0]+"="+s[2])
+        else:
+            print(s)
+
+    elif s[1] == ">":
+        if s[0] < s[2]:
+            print(s[0] + "<" + s[2])
+        elif s[0] == s[2]:
+            print(s[0] + "=" + s[2])
+        else:
+            print(s)
+
+
+    else:
+        if s[0] == s[2]:
+            print(s)
+        elif s[0] > s[2]:
+            print(s[0] + ">" + s[2])
+        else:
+            print(s[0] +"<"  + s[2])
