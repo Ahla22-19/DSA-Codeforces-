@@ -1,0 +1,10 @@
+a = input()
+c = input()
+t=True
+for i in range(len(a)):
+    if c[i] > a[i]:
+        t=False
+        print(-1)
+        break
+if t==True:
+    print(c)
