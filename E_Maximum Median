@@ -1,0 +1,27 @@
+a,b=[int(i)for i in input().split()]
+x=[int(i)for i in input().split()]
+x.sort()
+
+mid = a//2
+l=x[mid]
+r=l+b
+
+def valid(m):
+    operations = 0
+
+    for i in range(mid, a):
+        operations += max(0,m - x[i])
+
+    return operations <= b
+    
+
+right_most = 0
+
+while l<=r:
+    m=(l+r)//2
+    if valid(m):
+        l = m+1
+        right_most = m
+    else:
+        r = m-1
+print(right_most)
