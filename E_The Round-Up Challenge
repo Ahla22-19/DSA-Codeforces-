@@ -1,0 +1,12 @@
+#Digital minarets
+t=int(input())
+for i in range(t):
+    num=input()
+    k=[]
+    num=num[::-1]
+    for j in range(len(num)):
+        if num[j]>="1":
+            k.append(num[j]+j*"0")
+    print(len(k))
+    print(*k)
+
