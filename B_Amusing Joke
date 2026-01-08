@@ -1,0 +1,24 @@
+guest=input()
+host=input()
+pile=input()
+GH=guest+host
+letter_guest_and_host=[]
+PILE=[]
+for i in GH:
+    letter_guest_and_host.append(i)
+letter_guest_and_host.sort()
+for j in pile:
+    PILE.append(j)
+PILE.sort()
+if len(pile)!=len(GH):
+    print("NO")
+else:
+    count=0
+    for i in range(len(pile)):
+        if letter_guest_and_host[i]==PILE[i]:
+            count+=1
+        else:
+            print("NO")
+            break
+    if count==len(pile):
+        print("YES")
