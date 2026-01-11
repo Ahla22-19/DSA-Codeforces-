@@ -1,0 +1,14 @@
+#Digital minarets
+t=int(input())
+for i in range(t):
+    n=list(map(int,input().split()))
+    a=[]
+    c=0
+    max=0
+    for i in  range(len(n)):
+        if not a:
+            max=n[i]
+            a.append(n[i])
+        elif n[i]>max:
+            c+=1
+    print(c)
