@@ -1,0 +1,17 @@
+n = input().lower()
+m = input().lower()
+
+for i in range (len(m)):
+    if m[i] == n[i]:
+        continue
+    else:
+        if m[i] > n[i]:
+           print("-1")
+           break
+        elif m[i] < n[i]:
+           print("1")
+           break
+else:
+    print("0")
+         
+      
