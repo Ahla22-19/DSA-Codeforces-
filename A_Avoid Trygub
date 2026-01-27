@@ -1,0 +1,15 @@
+t = int(input())
+for _ in range(t):
+    n= int(input())
+    s= input().strip()
+    count = 0
+    ans= ""
+    for i in range(len(s)):
+        if s[i] == 'b':
+            count+=1
+    for j in range(count):
+        ans+='b'
+    for k in s:
+        if k != 'b':
+            ans+= k
+    print(ans)
