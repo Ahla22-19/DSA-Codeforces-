@@ -1,0 +1,19 @@
+t = int(input())
+for i in range(t):
+    n = int(input())
+    s = input()
+
+    use = s[1:len(s) - 1]
+    use2 = set(use)
+
+    if s[0] in use:
+        print("Yes")
+
+    elif s[-1] in use:
+        print("Yes")
+
+    elif len(use2) < len(use):
+        print("Yes")
+
+    else:
+        print("No")
