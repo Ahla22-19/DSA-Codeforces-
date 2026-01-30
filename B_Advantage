@@ -1,0 +1,14 @@
+tc=int(input())
+for i in range(tc):
+    length=int(input())
+    strength=list(map(int,input().split()))
+    new=sorted(strength)
+    max_strength=[]
+    for i in range(length):
+        if strength[i]<new[-1]:
+            element=strength[i]-new[-1]
+            max_strength.append(element)
+        else:
+            element=strength[i]-new[-2]
+            max_strength.append(element)
+    print(*max_strength)
