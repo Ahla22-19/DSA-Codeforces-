@@ -1,0 +1,21 @@
+n = int(input())
+l = []
+for i in range(n):
+    start, end = map(int,input().split())
+    l.append((start,-1))
+    l.append((end,1))
+l.sort()
+count = 0
+t=True
+
+for i,j in l:
+    if j == -1:
+        count += 1
+    else:
+        count -= 1
+    if count > 2:
+        t=False
+        print("NO")
+        break
+if t==True:
+    print("YES")
