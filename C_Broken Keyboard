@@ -1,0 +1,28 @@
+n=int(input())
+for i in range(n):
+    m=input()
+    l=0
+    r=1
+    if len(m)==1:
+        print(m)
+    else:
+        k=""
+        while r<len(m):
+            if m[l]==m[r]: 
+                l=r+1 
+                r=l+1
+            else:
+                k+=m[l]
+                l+=1
+                r+=1
+        if l<len(m):
+            k+=m[l]
+        m=list(k)
+        m[:]=set(m)
+        m.sort()
+        if len(m)>0:
+            for i in m:
+                print(i,end="")
+            print()
+        else:
+            print(k)
