@@ -1,0 +1,41 @@
+n = int(input())
+for i in range(n):
+    m = input()
+
+    def endgame(m, index, p1_turn, p2_turn, p1_goal, p2_goal):
+        if index == 10 or p1_goal > p2_goal + p2_turn or p2_goal > p1_goal + p1_turn:
+            return index
+
+        if index % 2 == 0:
+            p1_turn -= 1
+
+            if m[index] == "1":
+                return endgame(m, index + 1, p1_turn, p2_turn,p1_goal + 1, p2_goal)
+
+            elif m[index] == "0":
+                return endgame(m, index + 1, p1_turn, p2_turn,p1_goal, p2_goal)
+
+            else:
+                scored = endgame(m, index + 1, p1_turn, p2_turn, p1_goal + 1, p2_goal)
+                not_scored = endgame(m, index + 1, p1_turn, p2_turn,p1_goal, p2_goal)
+
+                return min(scored, not_scored)
+
+        else:
+            p2_turn -= 1
+
+            if m[index] == "1":
+                return endgame(m, index + 1, p1_turn, p2_turn, p1_goal, p2_goal + 1)
+
+            elif m[index] == "0":
+                return endgame(m, index + 1, p1_turn, p2_turn, p1_goal, p2_goal)
+
+            else:
+                scored = endgame(m, index + 1, p1_turn, p2_turn, p1_goal, p2_goal + 1)
+                not_scored = endgame(m, index + 1, p1_turn, p2_turn,p1_goal, p2_goal)
+
+                return min(scored, not_scored)
+            
+    print(endgame(m, 0, 5, 5, 0, 0))           
+
+
