@@ -1,0 +1,21 @@
+n= int(input())
+for i in range (n):
+    m= int(input())
+    s=list(map(int,input().split()))
+    a=sorted(s)
+    k=0
+    ans = True
+    while k<len(s):
+        if s[k]%2==0 and a[k]%2==0:
+            k+=1
+        elif s[k]%2==1 and a[k]%2==1:
+            k+=1
+        else:
+            ans=False
+            break
+    if ans:
+        print("YES")
+    else:
+        print("NO")
+
+                
