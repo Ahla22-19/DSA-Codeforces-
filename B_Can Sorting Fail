@@ -1,0 +1,16 @@
+t = int(input())
+for i in range(t):
+    n =  int(input())
+    m = list(map(int, input().split()))
+
+    a = [m[0]]
+    b = []
+
+    for i in range(1,n):
+        b.append(m[i])
+
+    a = a + b
+    if a == sorted(a):
+        print("NO")
+    else:
+        print("YES")
