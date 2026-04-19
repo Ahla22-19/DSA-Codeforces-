@@ -1,0 +1,41 @@
+
+
+
+
+
+n, m = list(map(int, input().split()))
+
+
+songs = []
+for i in range(n):
+    song = list(map(int, input().split()))
+    songs.append(song)
+
+
+prefix_songs = [x*y for x, y in songs]
+
+accum = 0
+for i in range(len(prefix_songs)):
+    accum += prefix_songs[i]
+    prefix_songs[i] = accum
+
+mon = list(map(int, input().split()))
+
+i = 0
+
+ans = []
+j = 0
+
+
+while j < len(mon) and i < len(prefix_songs):
+
+    if mon[j] <= prefix_songs[i]:
+        ans.append(i+1)
+        j += 1
+
+    else:
+        i += 1
+        
+
+for num in ans:
+    print(num)
