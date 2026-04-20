@@ -1,0 +1,29 @@
+from collections import Counter
+n =  int(input())
+a = input() 
+
+ans = []
+c1 = 0
+c2 = 0
+
+
+for ch in a:
+    if ch == "n":
+        c1 += 1
+    elif ch == "z":
+        c2 += 1
+
+
+
+
+for i in range(c1):
+    ans.append(1)
+
+for i in range(c2):
+    ans.append(0)
+
+
+
+
+print(*ans)
+ 
